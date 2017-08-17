@@ -6,6 +6,6 @@ HOST_IP=`ip route list dev docker0 | awk 'NR==1 {print $NF}'`
 
 $DIR/../../scripts/start-apt-cacher
 $DIR/../../scripts/start-nexus
-echo "Building openease/indigo-swi....";
+echo "Building openease/kinetic-swi....";
 docker build --build-arg HOST_IP=${HOST_IP} "$@" -t openease/kinetic-swi $DIR
 

@@ -19,10 +19,10 @@ RUN sh -c 'wget https://raw.githubusercontent.com/ros/rosdistro/master/ros.key &
     apt-get -qq -y install ros-kinetic-desktop swi-prolog swi-prolog-java libjson-java \
                            libjson-glib-dev python-yaml python-catkin-pkg python-rospkg \
                            emacs ros-kinetic-catkin git \
-                           ros-kinetic-rosjava ros-kinetic-rosbridge-suite \
+                           ros-kinetic-rosjava* ros-kinetic-rosbridge-suite ros-kinetic-tf2-web-republisher \
                            mongodb-clients \
                            ros-kinetic-rosauth mencoder lame libavcodec-extra \
-                           openjdk-8-jdk texlive-latex-base imagemagick  && \
+                           openjdk-8-jdk texlive-latex-base imagemagick && \
     apt-get -qq -y autoremove  && \
     apt-get -qq -y clean  && \
     rm -rf /var/lib/apt/lists/*  && \
